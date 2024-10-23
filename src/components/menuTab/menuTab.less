@@ -1,0 +1,41 @@
+.icon {
+  display: block;
+  position: relative;
+  top: 2px;
+}
+
+.word-box {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  white-space: nowrap;
+  // max-width: 100px;
+  // min-width: 100px;
+  display: block;
+  color: theme("colors.gray.500");
+}
+
+.active {
+  position: relative;
+
+  .word-box {
+    color: theme("backgroundColor.blue.600");
+  }
+
+  &::after {
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 4px;
+    width: 100%;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    background: theme("backgroundColor.blue.500");
+  }
+
+  .tab-item {
+    color: theme("backgroundColor.blue.600");
+  }
+}

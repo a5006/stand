@@ -1,0 +1,92 @@
+.editor-content {
+  text-align: left;
+
+  h1.title {
+    font-size: 34px;
+  }
+
+  h1 {
+    font-size: theme("fontSize.3xl");
+    font-weight: bold;
+    color: theme("backgroundColor.gray.800");
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: theme("fontSize.2xl");
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: theme("fontSize.xl");
+  }
+
+  h4 {
+    font-weight: bold;
+    font-size: theme("fontSize.lg");
+  }
+
+  h5 {
+    font-weight: bold;
+    font-size: theme("fontSize.base");
+  }
+
+  .w-e-toolbar {
+    display: flex;
+    justify-content: center;
+  }
+
+  #header-container {
+    min-width: 205px;
+    width: 16vw;
+    overflow-y: auto;
+    max-height: 90%;
+
+    li {
+      padding: theme("padding.1") theme("padding.2");
+      cursor: pointer;
+      display: block;
+      font-size: 12px;
+      border-radius: 4px;
+
+      &:hover {
+        color: theme("backgroundColor.blue.500");
+        background-color: theme("backgroundColor.gray.200");
+      }
+    }
+
+    li[type="header1"] {}
+
+    li[type="header2"] {
+      text-indent: 1em;
+    }
+
+    li[type="header3"] {
+      text-indent: 2em;
+    }
+
+    li[type="header4"] {
+      text-indent: 3em;
+    }
+
+    li[type="header5"] {
+      text-indent: 4em;
+    }
+  }
+}
+
+.editor-content[data-type="true"] {
+  .w-e-text-container {
+    height: auto;
+  }
+
+  #editor-container {
+    overflow-y: auto;
+  }
+
+  div#editor-text-area {
+    min-height: auto;
+    height: auto !important;
+    overflow: initial !important;
+  }
+}

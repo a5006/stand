@@ -1,0 +1,132 @@
+:root {
+  --primary-color: #3e5fd6;
+  --global-min-height: calc(100vh);
+  --bg-fitler: blur(5px) hue-rotate(20deg);
+  --bg-hover-color: rgb(245, 245, 245);
+  --view-width: 1360px;
+}
+
+body {
+  background: theme("backgroundColor.gray.100");
+}
+
+::-webkit-scrollbar {
+  --bar-width: 8px;
+  width: 6px;
+  height: 14px;
+  transition: 1s;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  transition: 1s;
+  cursor: pointer;
+
+  &:hover {
+    background: theme("backgroundColor.gray.200");
+    transition: 0.2s;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: theme("backgroundColor.gray.400");
+  // border-radius: 20px;
+  background-clip: content-box;
+  border: 1px solid #ffffff2a;
+  transition: 1s;
+  cursor: pointer;
+  display: none;
+
+  &:hover {
+    // background: theme("backgroundColor.gray.500");
+    transition: 0.2s;
+  }
+}
+
+body:hover::-webkit-scrollbar-thumb,
+ul:hover::-webkit-scrollbar-thumb,
+div:hover::-webkit-scrollbar-thumb {
+  // background-color: #333842;
+  display: block;
+  transition: 1s;
+  border: 1px solid #ffffff56;
+}
+
+body:hover::-webkit-scrollbar-track,
+ul:hover::-webkit-scrollbar-track,
+div:hover::-webkit-scrollbar-track {
+  background: theme("backgroundColor.gray.200");
+  transition: 0.2s;
+}
+
+.btn-icon-center {
+  line-height: 22px;
+}
+
+// 去掉滚动条
+@media (max-width: 1360px) {
+  :root {
+    --global-min-height: calc(100vh - 18px);
+  }
+}
+
+.menu-tabs-item .ant-tabs-dropdown-menu-title-content {
+  display: flex !important;
+}
+
+.fz16 {
+  font-size: 16px;
+}
+
+.slide-left-enter-active,
+.slide-left-leave-active {
+  transition: all 0.2s;
+}
+
+.slide-left-enter-from,
+.slide-left-leave-to {
+  transform: translateX(-100%);
+}
+
+.slide-left-enter-to,
+.slide-left-leave-from {
+  transform: translateX(0);
+}
+
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: all 0.2s;
+}
+
+.slide-right-enter-from,
+.slide-right-leave-to {
+  transform: translateX(100%);
+}
+
+.slide-right-enter-to,
+.slide-right-leave-from {
+  transform: translateX(0);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.2s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 1;
+}
+
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 0;
+}
